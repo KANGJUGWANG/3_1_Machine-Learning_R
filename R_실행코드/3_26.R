@@ -8,8 +8,7 @@ library(reshape2)
 time <- seq(1, 24) # 24시간
 temperature <- c(22, 21, 20, 19, 18, 18, 19, 20, 22, 24, 26, 28, 29, 28, 27, 25, 24, 23, 22, 22, 21, 21, 20, 19)
 data <- data.frame(time=time, temp=temperature)
-ggplot(data, aes(x=time, y=temp)) + 
-  geom_line() + # 선 그래프 추가
+ggplot(data, aes(x=time, y=temp)) +   geom_line() + # 선 그래프 추가
   labs(title="시간에 따른 온도 변화") +
   xlab("시간") +
   ylab("온도")
@@ -56,7 +55,7 @@ ggplot(df, aes(x = x, y = y)) +
 df <- data.frame(
   group = c(rep("Group 1", 60), rep ( "Group 2 ",60)),
   values = c(rnorm(60, mea = 0 ,sd =1), rnorm(60, mean = 2, sd =1))
-)
+);df
 ggplot (df,aes(x = group, y = values))+
   geom_boxplot(fill = c("lightblue","lightgreen"), outlier.color = "red")+
   labs(title = "Boxlot Example")+
