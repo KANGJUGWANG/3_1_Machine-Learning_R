@@ -48,3 +48,5 @@ ylab()# y레이블 옵션
 df <-data.frame("x1" =c(c(1,1,1),c(2,2,2)), "y1" = c(c(0,1,2),c(0,1,2)))
 ggplot(df, aes(group =x1, y=y1)) + geom_boxplot()
 
+##----- 3. 통계 -----##
+3-1 기술통계 
