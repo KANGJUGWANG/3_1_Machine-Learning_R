@@ -31,7 +31,7 @@ total_candies <- sum(candy_data$Observd);print(total_candies)
 expected<-rep(total_candies/3,3);print(expected)
 test_result <- chisq.test(candy_data$Observd, p=expected/sum(expected))
 print(test_result)
-# 결과 해석 : 기대값과 관측값의 분포의 차이가 없다.(p_value가 0.05보다 작기 때문)
+# 결과 해석 : 기대값과 관측값의 분포의 차이가 있다.(p_value가 0.05보다 작기 때문)
 # 적합도 검정(사후 검정)
 std_residuals<- (candy_data$Observd - expected) / sqrt(expected)
 chi_square_values <- std_residuals ^2 
@@ -45,7 +45,9 @@ print(candy_data)
 
 
 ## 실습(적합도 검정)
-datas <- read.csv("C:/Users/PC502/Downloads/국경통과데이터(명목 2).csv", skip = 2)
+#datas <- read.csv("C:/Users/PC502/Downloads/국경통과데이터(명목 2).csv", skip = 2)
+# local
+datas <- read.csv("C:/Users/rkdwn/Documents/GitHub/Machine-Learning_R_3_1/데이터/국경통과데이터(명목 2).csv", skip = 2)
 datas
 observed <- table(datas$US.Canada.Border,datas$Maine)
 observed
