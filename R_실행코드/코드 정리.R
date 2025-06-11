@@ -296,6 +296,8 @@ group_a_ztest <- c(85, 88, 90, 92, 91, 87, 89, 86, 84, 83, 85, 88, 90, 92, 91, 8
 group_b_ztest <- c(78, 82, 80, 85, 84, 87, 83, 81, 80, 79, 78, 82, 80, 85, 84, 87, 83, 81, 80, 79, 78, 82, 80, 85, 84, 87, 83, 81, 80, 79, 78, 82, 80, 85, 84, 87, 83, 81, 80, 79)
 sd_a_ztest = sd(group_a_ztest)
 sd_b_ztest = sd(group_b_ztest)
+
+anova_result
 result_ztest <- z.test(x = group_a_ztest, y = group_b_ztest, sigma.x = sd_a_ztest, sigma.y = sd_b_ztest, alternative = "two.sided")
 
 # F-test (두 집단 분산 비교 - 분산 동질성 검정)
